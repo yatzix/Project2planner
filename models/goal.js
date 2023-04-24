@@ -24,8 +24,9 @@ const goalSchema = new Schema({
         }
     },
     status: {
-        type: String,
-        enum: ['Pending', 'In progress', 'Done']
+        type: Boolean,
+        enum: ['Pending', 'In progress', 'Done'],
+        default: 'Pending'
     },
     progress: [journalSchema]
 })

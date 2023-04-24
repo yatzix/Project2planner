@@ -1,0 +1,24 @@
+<%- include('../partials/header', { title }) %>
+
+<form action="/goals" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  </label><br>
+  <label>Created on:
+    <input type="date" name="created">
+  </label><br>
+  <label>Deadline: 
+    <input type="date" name="deadline"
+  </label><br>
+  </label><br>
+  <label>Status:
+    <select name="status">
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>
+      </select>
+  </label><br>
+  <button type="submit">Add Goal</button>
+</form>
+
+<%- include('../partials/footer') %>
