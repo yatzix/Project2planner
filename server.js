@@ -3,6 +3,7 @@ const logger = require('morgan');
 const indexRoutes = require('./routes/index');
 const todosRoutes = require('./routes/todos');
 const goalsRoutes = require('./routes/goals');
+const journalsRoutes = require('./routes/journals');
 
 
 const app = express();
@@ -17,8 +18,11 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRoutes);
-app.use('/', todosRoutes);
+app.use('/', journalsRoutes);
 app.use('/goals', goalsRoutes);
+app.use('/', todosRoutes);
+
+
 
 app.use('*', (req, res) => {
     res.render('404', {title: '404 - Page Not Found'});

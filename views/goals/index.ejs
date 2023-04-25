@@ -1,23 +1,32 @@
-<%- include('../partials/header') %>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Created On</th>
-      <th>Deadline</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% goals.forEach(g => { %>
-        <tr>
-            <td><%= g.name %></td>
-            <td><%= g.created %></td>
-            <td><%= g.deadline %></td>
-            <td><%= g.status %></td>
-        </tr>
-    <% }) %>
-  </tbody>
-</table>
+<!DOCTYPE html> 
+<html>
+    <%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Created On</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% goals.forEach(g => { %>
+
+                        <tr>
+                            <td><%= g.name %></td>
+                            <td><%= g.created %></td>
+                            <td><%= g.deadline %></td>
+                            <td><%= g.status %></td>
+                            <td><a href="/goals/<%= g._id %>">See Goal</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+ </table>
 <%- include('../partials/footer') %>
+</body>
+</html>
+    

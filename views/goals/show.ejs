@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Created At</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= goal.name%></td>
+                    <td><%= goal.created %></td>
+                    <td><%= goal.deadline %></td>
+                    <td><%= goal.status %></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2>Journal Entry</h2>
+        <form action="/goals/<%= goal._id %>/journals" method="POST">
+            <label>
+                <P>Keep Track of your Progress:</P>:
+                <textarea name="progress" cols="30" rows="5" required></textarea>
+            </label>
+            <label>
+                When:
+                <input type="date" name="when"
+            </label>
+            <input type="submit" value="Add Journal Entry">
+        </form>
+        <% if (goal.progress.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Pregress</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% goal.progress.forEach(function(j) { %>
+            <tr>
+              <td><%= j.progress %></td>
+              <td><%= j.when %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h5>No Journal Entries Yet </h5>
+    <% } %>
+</section>
+<%- include('../partials/footer') %>
+</body>
+</html> 

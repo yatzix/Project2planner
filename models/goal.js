@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const journalSchema = new Schema({
     progress: String,
-    When: Date,
+    when: Date,
 })
 
 const goalSchema = new Schema({
