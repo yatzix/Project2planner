@@ -8,6 +8,9 @@ function newGoal(req, res){
 async function create(req, res){
     try {
         await Goal.create(req.body);
+        for (let key in req.body) {
+            if (req.body[key] === '') delete req.body[key];
+        }
         res.redirect('/goals');
     } catch(error){
         console.log(error)
@@ -29,8 +32,22 @@ async function index (req, res){
         res.render('error', {title: 'Something Went Wrong'});
     }
 }
+async function show(req, res) {
+    try {
+        const goal = await Goal.findById(req.params.id)
+        res.render('goals/show', { 
+            goal: goal, 
+            title: 'See Goal Details',
+        });
+    } catch (error) {
+        console.log(error);
+        res.render('error', {title: 'Something went wrong'});
+    }
+}
+
 module.exports = {
     new: newGoal,
     create,
-    index
+    index,
+    show
 }
