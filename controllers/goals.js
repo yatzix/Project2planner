@@ -15,7 +15,22 @@ async function create(req, res){
     }
 }
 
+async function index (req, res){
+    try{
+        const allGoals = await Goal.find({});
+
+        res.render('goals/index', { 
+            goals: allGoals, 
+            title: 'All Goals'
+        });
+    } catch (error) {
+        // during development mode; console.log the error 
+        console.log(error);
+        res.render('error', {title: 'Something Went Wrong'});
+    }
+}
 module.exports = {
     new: newGoal,
-    create
+    create,
+    index
 }
