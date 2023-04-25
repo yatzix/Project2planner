@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head') %>
-<body>
+  <%- include('../partials/head') %>
+  <body>
     <%- include('../partials/header') %>
-    <form action="/todos/<%= goal._id %>/todos" method="POST">
-        <label>
-            Name:
-            <input name="name">
-        </label><br>
-        <label>
-            Created:
-            <input type="date" name="created">
-        </label><br>
-        <label> Status:
+    <form action="/goals/<%=goal._id %>/todos" method="POST">
+      <label>
+        Name:
+        <input name="name"> 
+      </label> <br/>
+      <label>
+        Created:
+        <input type="date" name="created"> </label
+      ><br/>
+      <label>
+        Status:
         <select name="status">
-            <option value="In Progess">In Progress</option>
-            <option value="Pending">Pending</option>
-            <option value="Done">Done</option>
+          <option value="In Progess">In Progress</option>
+          <option value="Pending">Pending</option>
+          <option value="Done">Done</option>
         </select>
-        </label>
-        <button type="submit">Add Item</button>
+      </label>
+      <button type="submit" action="/goals/<%=goal._id%>">Add Item</button>
     </form>
     <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

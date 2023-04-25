@@ -1,4 +1,5 @@
 const Goal = require('../models/goal')
+const Todo = require('../models/todo')
 
 function newGoal(req, res){
     res.render('goals/new', {
@@ -34,10 +35,12 @@ async function index (req, res){
 }
 async function show(req, res) {
     try {
-        const goal = await Goal.findById(req.params.id)
+        const goal = await Goal.findById(req.params.id);
+        const todos = await Todo.find({ goal: goal._id})
         res.render('goals/show', { 
             goal: goal, 
             title: 'See Goal Details',
+            todos
         });
     } catch (error) {
         console.log(error);
