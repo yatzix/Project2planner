@@ -21,11 +21,11 @@ const goalSchema = new Schema({
         type: Date,
         default: function(){
             return new Date(new Date().setFullYear(new Date().getFullYear() + 1))
-        }
+        },
     },
     status: {
-        type: Boolean,
-        enum: ['Pending', 'In progress', 'Done'],
+        type: String,
+        enum: ['Pending', 'In Progress', 'Done'],
         default: 'Pending'
     },
     progress: [journalSchema]
