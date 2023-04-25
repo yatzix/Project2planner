@@ -1,7 +1,12 @@
 const express = require('express');
 const logger = require('morgan');
 const indexRoutes = require('./routes/index');
+const todosRoutes = require('./routes/todos');
+const goalsRoutes = require('./routes/goals');
+
+
 const app = express();
+
 
 app.set('view engine', 'ejs');
 require('dotenv').config();
@@ -12,6 +17,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRoutes);
+app.use('/', todosRoutes);
+app.use('/goals', goalsRoutes);
 
 app.use('*', (req, res) => {
     res.render('404', {title: '404 - Page Not Found'});
