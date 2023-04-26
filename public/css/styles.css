@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Vast+Shadow&display=swap');
 body {
     height: 100vh;
     margin: 0;
@@ -6,7 +6,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #EEC6CA;
+    /* background-color: #EEC6CA; */
+    background-image: linear-gradient(rgb(239, 192, 239),rgb(212, 103, 121), #ffb7c3 , rgb(212, 103, 121), rgb(239, 192, 239)
+    )
     
   }
 
@@ -17,7 +19,7 @@ body {
     color: #fff8fe;
 }
 header {
-    font-family: 'Vast Shadow', cursive;
+    font-family: 'Great Vibes', cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,10 +39,6 @@ h1 {
     margin: 0; /* Remove any margin around the h1 element */
   }
 
-nav {
-    display: flex;
-    margin-top: 20px; /* Add margin to the top of the nav element */
-  }
 
   .container1, .container2, .container3 {
     background-color: #ffb7c3;
@@ -69,4 +67,8 @@ nav {
 
   .container3:hover {
     transform: scale(1.1);
+  }
+  
+  button {
+    background-color: transparent;
   }
