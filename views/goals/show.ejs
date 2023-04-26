@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Created At</th>
+            <th>Deadline</th>
+            <th>Status</th>
+            <br />
+            <th>Your To Do's</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= goal.name%></td>
+            <td><%= goal.created %></td>
+            <td><%= goal.deadline %></td>
+            <td><%= goal.status %></td>
+            <td><a href="/goals/<%= goal._id %>/todos/new">New To Do</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <% if (todos.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Your To Do's</th>
+            <th>When</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% todos.forEach(function(t) { %>
+          <tr>
+            <td><%= t.todo %></td>
+            <td><%= t.when %></td>
+            <td><%= t.status %></td>
+            <td><form method="POST" action="/goals/<%= goal._id %>/todos/<%= t._id %>?_method=DELETE" class="delete-todo">
+              <button type="submit">Delete Item</button></form></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <h5>No To Do Items</h5>
+      <% } %>
+    </section>
+
+    <section>
+      <h2>Journal Entry</h2>
+      <form action="/goals/<%= goal._id %>/journals" method="POST">
+        <label>
+          <P>Keep Track of your Progress:</P>:
+          <textarea name="progress" cols="30" rows="5" required></textarea>
+        </label>
+        <label> When: <input type="date" name="when" </label>
+        <input type="submit" value="Add Journal Entry" />
+      </form>
+      <% if (goal.progress.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Progress</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% goal.progress.forEach(function(j) { %>
+          <tr>
+            <td><%= j.progress %></td>
+            <td><%= j.when %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <h5>No Journal Entries Yet</h5>
+      <% } %>
+    </section>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEC6CA;
+    
+  }
+
+  header,footer{
+    width: 100%;        
+    background: #ffb7c3;
+    padding: 10px 0;
+    color: #fff8fe;
+}
+header {
+    font-family: 'Vast Shadow', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+  }
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+h1 {
+    margin: 0; /* Remove any margin around the h1 element */
+  }
+
+nav {
+    display: flex;
+    margin-top: 20px; /* Add margin to the top of the nav element */
+  }
+
+  .container1, .container2, .container3 {
+    background-color: #ffb7c3;
+    font-family: 'Vast Shadow', cursive;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 20vmin;
+    height: 30vmin;
+    color: azure;
+  }
+
+  .container1:hover{
+    transform: scale(1.1);
+
+  }
+
+  .container2:hover{
+    transform: scale(1.1);
+  }
+
+  .container3:hover {
+    transform: scale(1.1);
+  }
