@@ -9,6 +9,7 @@ function newGoal(req, res){
 async function create(req, res){
     try {
         await Goal.create(req.body);
+        console.log(req.body)
         for (let key in req.body) {
             if (req.body[key] === '') delete req.body[key];
         }
@@ -48,9 +49,19 @@ async function show(req, res) {
     }
 }
 
+async function deleteGoal(req, res) {
+    try{
+        await Goal.findByIdAndRemove(req.params.id);
+        res.redirect('/goals')
+        } catch(error){
+            console.log(error)
+            res.render('error', {title: 'Something went wrong'})
+    }
+}
 module.exports = {
     new: newGoal,
     create,
     index,
-    show
+    show,
+    delete: deleteGoal
 }

@@ -4,6 +4,7 @@ const indexRoutes = require('./routes/index');
 const todosRoutes = require('./routes/todos');
 const goalsRoutes = require('./routes/goals');
 const journalsRoutes = require('./routes/journals');
+const methodOverride = require('method-override');
 
 
 const app = express();
@@ -16,6 +17,7 @@ require('./config/database');
 app.use(logger('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRoutes);
 app.use('/', journalsRoutes);
