@@ -3,9 +3,13 @@ const Schema = mongoose.Schema;
 
 const todoSchema = new Schema({
    todo:{type: String, required: true},
-   when:{type: Date, defualt: function(){
-    return new Date(new Date().setFullYear(new Date().getFullYear() +1))    
-}},
+   when:{type: Date, default: () => new Date(new Date().getFullYear() + 1),
+    get: function(val) {
+        if (!val) {
+            return null;
+        }
+        return val.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+    }},
 status: {
     type: String,
     enum: ['Pending', 'In Progress', 'Done'],

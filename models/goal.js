@@ -13,8 +13,14 @@ const goalSchema = new Schema({
     },
     created: {
         type: Date,
-        function(){
+        default: function(){
             return new Date("2021-11-21")
+        },
+        get: function(val) {
+            if (!val) {
+                return null;
+            }
+            return val.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
         }
     },
     deadline: {
@@ -22,6 +28,12 @@ const goalSchema = new Schema({
         default: function(){
             return new Date(new Date().setFullYear(new Date().getFullYear() + 1))
         },
+        get: function(val) {
+            if (!val) {
+                return null;
+            }
+            return val.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' });
+        }
     },
     status: {
         type: String,
