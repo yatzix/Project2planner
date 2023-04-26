@@ -58,10 +58,11 @@ async function deleteGoal(req, res) {
             res.render('error', {title: 'Something went wrong'})
     }
 }
+
 module.exports = {
     new: newGoal,
     create,
     index,
     show,
-    delete: deleteGoal
+    delete: deleteGoal,
 }
