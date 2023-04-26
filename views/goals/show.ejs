@@ -40,6 +40,8 @@
             <td><%= t.name %></td>
             <td><%= t.created %></td>
             <td><%= t.status %></td>
+            <td><form method="POST" action="/goals/<%= goal._id %>/todos/<%= t._id %>?_method=DELETE" class="delete-todo">
+              <button type="submit">Delete Item</button></form></td>
           </tr>
           <% }); %>
         </tbody>

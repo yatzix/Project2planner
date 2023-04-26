@@ -21,11 +21,23 @@ async function create(req, res) {
         res.send('error')
     }
 }
-
+async function deleteTodo(req, res) {
+    try{
+        const goal = await Goal.findById(req.params.id);
+        req.body.goal = req.params.id;
+        const todoId = req.params.todoId;
+        await Todo.findByIdAndRemove(req.params.todoId);
+        res.redirect(`/goals/${goal.id}`)
+        } catch(error){
+            console.log(error)
+            res.render('error', {title: 'Something went wrong'})
+    }
+}
 
 
 module.exports = {
     create,
-    new: newTodo
+    new: newTodo,
+    delete: deleteTodo
 
 };
