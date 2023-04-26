@@ -13,8 +13,8 @@ const goalSchema = new Schema({
     },
     created: {
         type: Date,
-        default: function(){
-            return new Date().getFullYear();
+        function(){
+            return new Date("2021-11-21")
         }
     },
     deadline: {

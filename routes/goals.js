@@ -6,5 +6,6 @@ router.get('/new', goalsController.new);
 router.post('/', goalsController.create);
 router.get('/', goalsController.index);
 router.get('/:id', goalsController.show);
+router.delete('/:id', goalsController.delete);
 
 module.exports = router;
