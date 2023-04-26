@@ -6,7 +6,11 @@ const todoSchema = new Schema({
    created:{type: Date, defualt: function(){
     return new Date(new Date().setFullYear(new Date().getFullYear() +1))    
 }},
-   status: {type: String, enum:['In Progress', 'Pending','Done']},
+status: {
+    type: String,
+    enum: ['Pending', 'In Progress', 'Done'],
+    default: 'Pending'
+},
    goal: {type: Schema.Types.ObjectId, ref: 'Goal'},
 });
 
