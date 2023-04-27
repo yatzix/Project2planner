@@ -60,7 +60,6 @@ h1 {
 
 
   .container1, .container2, .container3 {
-    /* background-color: #ffb7c3; */
     background-color: #cb6e4c;
     font-family: 'Vast Shadow', cursive;
     border-radius: 10px;
@@ -89,7 +88,7 @@ h1 {
     transform: scale(1.1);
   }
   
-  .homeButton, .seeGoalButton, .newGoalButton, .logoutbutton {
+  .homeButton, .seeGoalButton, .newGoalButton, .logout-button-header-partial, .index-logout-button {
     height: 5vmin;
     width: 20vmin;
     background-color: #f9e2d1;
@@ -108,11 +107,16 @@ h1 {
   .newGoalButton:hover{
     transform: scale(1.1);
   }
+
+  .logout-button-header-partial:hover{
+    transform: scale(1.1);
+  }
+
   nav {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 8vmin;
+    top: 2vmin;
     left: 0;
     right: auto;
     padding: 10px;
@@ -156,4 +160,43 @@ a:visited{
 
 .login:hover{
     transform: scale(1.1);
+}
+.index-logout-button{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 15vmin;
+    left: 0;
+    right: auto;
+    padding: 10px;
+    width: 15%;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 5vmin;
+    width: 20vmin;
+    background-color: #f9e2d1;
+    font-family:'Prata', serif;
+    border-radius: 10px; 
+    box-shadow: -1px 1px 2px #000;
+   
+}
+.index-logout-button:hover{
+    transform: scale(1.1);
+}
+
+.logout-image{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 14vmin;
+    left: 0;
+    right: auto;
+    padding: 10px;
+    width: 15%;
+    margin-left: 160px;
+    align-items: center;
+    justify-content: center;
+    height: 5vmin;
+    width: 5vmin;
 }
