@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&display=swap');
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #f9e2d1; */
+    /* background-image: linear-gradient(rgb(239, 192, 239),rgb(212, 103, 121), #ffb7c3 , rgb(212, 103, 121), rgb(239, 192, 239) */
+    background-image: url("https://i.imgur.com/iuerYyk.png");
+    
+    
+    
+  }
+
+  header,footer{
+    width: 100%;        
+    /* background: #ffb7c3; */
+    background: #fb9976 ;
+    padding: 10px 0;
+    color: #fff8fe;
+    
+}
+header {
+    font-family:'Prata', serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+  }
+  h1{
+    font-family:'Prata', serif; 
+    font-size: 7vmin;
+    text-shadow: -1px 1px 2px #000
+  }
+  h2{
+    margin-top: 0;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 5px ;
+    color: #f9e2d1;
+    text-shadow: -1px 1px 2px #000;
+    margin-bottom: 0%;
+    
+  }
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+h1 {
+    margin: 0; /* Remove any margin around the h1 element */
+  }
+
+
+  .container1, .container2, .container3 {
+    /* background-color: #ffb7c3; */
+    background-color: #cb6e4c;
+    font-family: 'Vast Shadow', cursive;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 20vmin;
+    height: 30vmin;
+    color: azure;
+  }
+
+  .container1:hover{
+    transform: scale(1.1);
+
+  }
+
+  .container2:hover{
+    transform: scale(1.1);
+  }
+
+  .container3:hover {
+    transform: scale(1.1);
+  }
+  
+  .homeButton, .seeGoalButton, .newGoalButton {
+    height: 5vmin;
+    width: 20vmin;
+    background-color: #f9e2d1;
+    font-family:'Prata', serif;
+    border-radius: 10px; 
+    box-shadow: -1px 1px 2px #000;
+  }
+  .homeButton:hover{
+    transform: scale(1.1);
+  }
+
+  .seeGoalButton:hover{
+    transform: scale(1.1);
+  }
+
+  .newGoalButton:hover{
+    transform: scale(1.1);
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 8vmin;
+    left: 0;
+    right: auto;
+    padding: 10px;
+    width: 15%;
+}
+.logo{
+    width: 8vmin;
+    height: 8vmin;
+    
+}
+a{
+    font-family:'Prata', serif; 
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
+}
