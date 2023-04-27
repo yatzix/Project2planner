@@ -17,6 +17,7 @@ const app = express();
 app.set('view engine', 'ejs');
 require('dotenv').config();
 require('./config/database');
+require('./config/passport')
 
 app.use(logger('dev'));
 app.use(express.static('public'));
@@ -30,6 +31,10 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(function (req, res, next){
+    res.locals.user = req.user
+    next();
+})
 
 
 
