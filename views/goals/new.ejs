@@ -4,23 +4,23 @@
   include('../partials/head', { title }) %>
   <body class="newGoalBody">
     <form action="/goals" method="POST">
-      <h1>Create Your Goal</h1>
-      <label
+      <h1 class="h1-goals-new">Create Your Goal</h1>
+      <label class="goals-name-label"
         >Name:
         <input type="text" name="name" />
       </label>
-      <label>Created on:
+      <label class="goals-created-label">Created on:
         <input type="date" name="created" />
       </label>
-      <label>Deadline: <input type="date" name="deadline"> </label>
+      <label class="goals-deadline">Deadline: <input type="date" name="deadline"> </label>
       <label>Status:
-        <select name="status">
+        <select name="status" class="goals-select">
           <option value="Pending">Pending</option>
           <option value="In Progress">In Progress</option>
           <option value="Done">Done</option>
         </select>
       </label>
-      <button type="submit">Add Goal</button>
+      <button type="submit" class="add-goal-button">Add Goal</button>
     </form>
 
     <%- include('../partials/footer') %>
