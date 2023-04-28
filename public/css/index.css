@@ -7,12 +7,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* background-color: #f9e2d1; */
-    /* background-image: linear-gradient(rgb(239, 192, 239),rgb(212, 103, 121), #ffb7c3 , rgb(212, 103, 121), rgb(239, 192, 239) */
-    background-image: url("https://i.imgur.com/iuerYyk.png");
-    
-    
-    
+    background-image: url("https://i.imgur.com/iuerYyk.png");  
   }
 
   header,footer{
