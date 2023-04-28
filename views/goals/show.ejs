@@ -39,7 +39,7 @@
           <tr>
             <td class="todo-todo"><%= t.todo %></td>
             <td class="todo-when"><%= t.when %></td>
-            <td class="todo-when"><%= t.status %></td>
+            <td class="todo-status"><%= t.status %></td>
             <td class="todo-delete"><form method="POST" action="/goals/<%= goal._id %>/todos/<%= t._id %>?_method=DELETE" class="delete-todo">
               <button type="submit" class="todo-delete-button">Delete Item</button></form></td>
           </tr>

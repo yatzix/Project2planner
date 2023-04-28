@@ -34,7 +34,7 @@
     transition: width 0.9s ease-in-out
   }
 
-  input[type=date]{
+  .todo-date{
     width: 15%;
     padding: 12px 20px;
     margin: 8px 0;

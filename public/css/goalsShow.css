@@ -43,7 +43,7 @@ textarea{
 }
 
 .journal-date{
-    width: 40vmin;
+    width: 20vmin;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -178,10 +178,20 @@ td{
    
 }
 .todo-when-label{
-    margin-left:15vmin;
+    margin-left:12vmin;
 }
 .todo-status-label{
-    margin-left: 18vmin;
+    margin-left: 17vmin;
+}
+.todo-todo{
+    margin-left: 4vmin;
+}
+.todo-when{
+    margin-left:0vmin;
+}
+
+.todo-status{
+    margin-left: 0vmin;
 }
 
 .journal-head{
@@ -214,4 +224,12 @@ td{
 }
 .journal-date-label{
     margin-left:45vmin;
+}
+
+.journal-progress{
+    margin-left: 4vmin;
+
+}
+.journal-when{
+    margin-left:0vmin;
 }
