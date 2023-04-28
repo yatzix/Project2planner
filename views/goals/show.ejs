@@ -12,7 +12,7 @@
             <th class="show-deadline">Deadline</th>
             <th class="show-status">Status</th>
             <br/>
-            <th class="your-to-dos">Your To Do's</th>
+            <th class="add-to-dos">Add To Do's</th>
           </tr>
         </thead>
         <tbody class="show-body">
@@ -56,8 +56,8 @@
           <P>Keep Track of your Progress:</P>
           <textarea name="progress" cols="30" rows="5" required></textarea>
         </label>
-        <label> When: <input type="date" name="when"> </label>
-        <input type="submit" value="Add Journal Entry" />
+        <label> Date: <input type="date" name="when" class="journal-date"> </label>
+        <button type="submit" class="add-journal-button">Add Journal Entry</button>
       </form>
       <% if (goal.progress.length) { %>
       <table>
