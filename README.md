@@ -31,11 +31,13 @@ Create Goal Page:
 
 <img width="1910" alt="Screenshot 2023-04-27 at 9 26 17 PM" src="https://user-images.githubusercontent.com/114562006/235054102-2c939871-4c5f-4ec3-82d3-206eeaa71042.png">
 
-All Goals Page
-![Screenshot 2023-04-27 at 9 47 31 PM](https://user-images.githubusercontent.com/124859535/235056861-7b4f22dd-84e3-42d9-af31-fca6d45d6c7f.png)
+All Goals Page:
+![Screenshot 2023-04-28 at 11 25 13 AM](https://user-images.githubusercontent.com/114562006/235225752-285a6eb9-96eb-4014-8a3a-d81dc9d44682.png)
 
-See Goal Page
-![Screenshot 2023-04-27 at 9 47 49 PM](https://user-images.githubusercontent.com/124859535/235056927-a65de352-9ad5-4532-a923-1d9f505e7807.png)
+
+See Goal Page:
+![Screenshot 2023-04-28 at 11 25 20 AM](https://user-images.githubusercontent.com/114562006/235225866-858aedaa-b7fd-4083-9871-735eebc8e084.png)
+
 
 Create a new To Do item page
 ![Screenshot 2023-04-27 at 9 48 00 PM](https://user-images.githubusercontent.com/124859535/235056964-13aa2a99-ac4f-4993-8926-20d686d5d18a.png)
