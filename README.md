@@ -17,6 +17,8 @@ Node.js
 Express
 Mongoose 
 MongoDB
+HTML
+CSS
 
 ## Usage
 Log in page:
