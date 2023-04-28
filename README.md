@@ -29,6 +29,15 @@ Create Goal Page:
 
 <img width="1910" alt="Screenshot 2023-04-27 at 9 26 17 PM" src="https://user-images.githubusercontent.com/114562006/235054102-2c939871-4c5f-4ec3-82d3-206eeaa71042.png">
 
+All Goals Page
+![Screenshot 2023-04-27 at 9 47 31 PM](https://user-images.githubusercontent.com/124859535/235056861-7b4f22dd-84e3-42d9-af31-fca6d45d6c7f.png)
+
+See Goal Page
+![Screenshot 2023-04-27 at 9 47 49 PM](https://user-images.githubusercontent.com/124859535/235056927-a65de352-9ad5-4532-a923-1d9f505e7807.png)
+
+Create a new To Do item page
+![Screenshot 2023-04-27 at 9 48 00 PM](https://user-images.githubusercontent.com/124859535/235056964-13aa2a99-ac4f-4993-8926-20d686d5d18a.png)
+
 ## Roadmap
 ✅ AAU I want to be able to login into my user profile.
 ✅ AAU I want to have the option to delete to-dos from to-dos list in my Goals Details page
