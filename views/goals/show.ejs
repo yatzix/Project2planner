@@ -3,45 +3,45 @@
   <%- include('../partials/head') %>
   <body>
     <%- include('../partials/header') %>
-    <section>
-      <table id="show-table">
-        <thead>
+    <section id="show-table">
+      <table >
+        <thead class="show-head">
           <tr>
-            <th>Name</th>
-            <th>Created At</th>
-            <th>Deadline</th>
-            <th>Status</th>
+            <th class="show-name">Name</th>
+            <th class="show-created">Created On</th>
+            <th class="show-deadline">Deadline</th>
+            <th class="show-status">Status</th>
             <br/>
-            <th>Your To Do's</th>
+            <th class="your-to-dos">Your To Do's</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="show-body">
           <tr>
-            <td><%= goal.name%></td>
-            <td><%= goal.created %></td>
-            <td><%= goal.deadline %></td>
-            <td><%= goal.status %></td>
-            <td><a href="/goals/<%= goal._id %>/todos/new">New To Do</a></td>
+            <td class="show-name-body"><%= goal.name%></td>
+            <td class="show-created-body"><%= goal.created %></td>
+            <td class="show-deadline-body"><%= goal.deadline %></td>
+            <td class="show-status-body"><%= goal.status %></td>
+            <td class="show-todo-body"><a href="/goals/<%= goal._id %>/todos/new"> <button class="todo-button">New To Do</button> </a></td>
           </tr>
         </tbody>
       </table>
       <% if (todos.length) { %>
       <table>
-        <thead>
+        <thead class="todo-head">
           <tr>
-            <th>Your To Do's</th>
-            <th>When</th>
-            <th>Status</th>
+            <th class="todo-label">Your To Do's</th>
+            <th class="todo-when-label">When</th>
+            <th class="todo-status-label">Status</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="todo-body">
           <% todos.forEach(function(t) { %>
           <tr>
-            <td><%= t.todo %></td>
-            <td><%= t.when %></td>
-            <td><%= t.status %></td>
-            <td><form method="POST" action="/goals/<%= goal._id %>/todos/<%= t._id %>?_method=DELETE" class="delete-todo">
-              <button type="submit">Delete Item</button></form></td>
+            <td class="todo-todo"><%= t.todo %></td>
+            <td class="todo-when"><%= t.when %></td>
+            <td class="todo-when"><%= t.status %></td>
+            <td class="todo-delete"><form method="POST" action="/goals/<%= goal._id %>/todos/<%= t._id %>?_method=DELETE" class="delete-todo">
+              <button type="submit" class="todo-delete-button">Delete Item</button></form></td>
           </tr>
           <% }); %>
         </tbody>
@@ -49,13 +49,11 @@
       <% } else { %>
       <h5>No To Do Items</h5>
       <% } %>
-    </section>
-
-    <section>
-      <h2>Journal Entry</h2>
-      <form action="/goals/<%= goal._id %>/journals" method="POST">
+    
+      <form action="/goals/<%= goal._id %>/journals" method="POST" class="journals-form">
+        <h2 class="h2-journal">Journal Entry</h2>
         <label>
-          <P>Keep Track of your Progress:</P>:
+          <P>Keep Track of your Progress:</P>
           <textarea name="progress" cols="30" rows="5" required></textarea>
         </label>
         <label> When: <input type="date" name="when"> </label>
@@ -83,5 +81,4 @@
       <% } %>
     </section>
     <%- include('../partials/footer') %>
-  </body>
 </html>

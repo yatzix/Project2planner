@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&display=swap');
+#show-table{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin-top: 10vmin;
+    padding: 0;
+}
+textarea{
+    width: 50%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    font-family:'Prata', serif; ;
+}
+.h2-journal{
+    margin-top: 0;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 5px ;
+    color: #cb6e4c;
+    text-shadow: -1px 1px 2px #000;
+    margin-bottom: 0%;
+}

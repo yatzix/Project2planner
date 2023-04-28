@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../partials/head') %>
-  <body>
+  <body class="newTodoBody">
     <%- include('../partials/header') %>
-    <form action="/goals/<%=goal._id %>/todos" method="POST">
+    <form action="/goals/<%=goal._id %>/todos" method="POST" class="todos-form">
         <h1>Add Your To Do</h1>
       <label>
         To Do:
-        <input name="todo"> 
+        <input type="text" name="todo"> 
       </label>
       <label>
         When:
@@ -21,7 +21,7 @@
           <option value="Done">Done</option>
         </select>
       </label>
-      <button type="submit" action="/goals/<%=goal._id%>">Add Item</button>
+      <button type="submit" action="/goals/<%=goal._id%>" class="add-item-button">Add Item</button>
     </form>
     <%- include('../partials/footer') %>
   </body>
