@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&display=swap');
+#show-table{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin-top: 10vmin;
+    padding: 0;
+}
+textarea{
+    width: 40vmin;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    font-family:'Prata', serif; ;
+}
+.h2-journal{
+    margin-top: 0;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 5px ;
+    color: #cb6e4c;
+    text-shadow: -1px 1px 2px #000;
+    margin-bottom: 0%;
+}
+.journals-form{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 35vmin;
+        left: auto;
+        right: 6vmin;
+        padding: 10px;
+        width: 40vmin;
+}
+
+.journal-date{
+    width: 40vmin;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: white;  
+   
+  }
+.add-journal-button{
+    width: 40vmin;
+    height: 5vmin;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: rgb(0, 0, 0);  
+    margin-top: 0;   
+}
+
+.show-head{
+    color: black;
+    width: 100%;
+
+}
+
+tr{
+    width: 100%;
+    display: flex;
+}
+
+.todo-button{
+    width: 20vmin;
+    height: 5vmin;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: rgb(0, 0, 0);  
+    margin-top: 0;
+}
+
+.todo-delete-button{
+    width: 20vmin;
+    height: 5vmin;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: rgb(0, 0, 0);  
+    margin-top: 0;
+}
+.todo-delete-button:focus{
+    background-color: rgb(226, 88, 38);
+    border: 3px solid #555;
+}
+
+#show-body{
+    color: black;
+    width: 100%; 
+}
+
+td{
+    width: 100%;
+    display: flex;
+}
+.show-name{
+    margin-left: 1vmin;
+   
+}
+.show-created{
+    margin-left:1vmin;
+}
+.show-deadline{
+    margin-left: 1vmin;
+}
+
+.show-status{
+    margin-left: 1vmin;
+}
+.add-to-dos{
+    margin-left: 30vmin;
+}

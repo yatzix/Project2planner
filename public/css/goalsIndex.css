@@ -1,0 +1,95 @@
+
+#content-see-all{
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin-top: 10vmin;
+    padding: 0;
+    
+
+}
+#labelSeeAllContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: black;
+    width: 100%;
+
+}
+
+tr{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    margin-right: 30px;
+
+
+}
+
+.see-goal-button{
+    width: 20vmin;
+    height: 5vmin;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: rgb(0, 0, 0);  
+    margin-top: 0;
+}
+
+.delete-goal-button{
+    width: 20vmin;
+    height: 5vmin;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: rgb(0, 0, 0);  
+    margin-top: 0;
+}
+.delete-goal-button:focus{
+    background-color: #f9e2d1;
+    border: 3px solid #555;
+}
+
+#see-goal-body{
+    color: black;
+    width: 100%; 
+}
+
+td{
+    width: 100%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    padding: 0;
+    margin-left: 30px;
+
+}
+.label-name{
+    margin-left: 7vmin;
+   
+}
+.label-created{
+    margin-left:20vmin;
+}
+.label-deadline{
+    margin-left: 19vmin;
+}
+
+.label-status{
+    margin-left: 19vmin;
+}
+.label-details{
+    margin-left: 30vmin;
+}

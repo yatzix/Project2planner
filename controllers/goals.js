@@ -1,5 +1,6 @@
 const Goal = require('../models/goal')
 const Todo = require('../models/todo')
+const User = require('../models/user')
 
 function newGoal(req, res){
     res.render('goals/new', {
@@ -8,11 +9,9 @@ function newGoal(req, res){
 }
 async function create(req, res){
     try {
-        await Goal.create(req.body);
-        console.log(req.body)
-        for (let key in req.body) {
-            if (req.body[key] === '') delete req.body[key];
-        }
+        const goal = await Goal.create(req.body);
+        req.user.goals.push(goal._id);
+        await req.user.save();
         res.redirect('/goals');
     } catch(error){
         console.log(error)
@@ -22,14 +21,12 @@ async function create(req, res){
 
 async function index (req, res){
     try{
-        const allGoals = await Goal.find({});
-
+        const user = await User.findById(req.user._id).populate('goals');
         res.render('goals/index', { 
-            goals: allGoals, 
+            goals: user.goals, 
             title: 'All Goals'
         });
     } catch (error) {
-        // during development mode; console.log the error 
         console.log(error);
         res.render('error', {title: 'Something Went Wrong'});
     }

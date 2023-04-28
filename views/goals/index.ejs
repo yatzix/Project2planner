@@ -4,25 +4,26 @@
     <body>
         <%- include('../partials/header') %>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Created On</th>
-                    <th>Deadline</th>
-                    <th>Status</th>
+        <table id="content-see-all">
+            <thead id="labelSeeAllContainer">
+                <tr >
+                    <th class="label-name">Name</th>
+                    <th class="label-created" >Created On</th>
+                    <th class="label-deadline">Deadline</th>
+                    <th class="label-status"> Status</th>
+                    <th class="label-details">Details</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="see-goal-body">
                     <% goals.forEach(g => { %>
                         <tr>
-                            <td><%= g.name %></td>
-                            <td><%= g.created %></td>
-                            <td><%= g.deadline %></td>
-                            <td><%= g.status %></td>
-                            <td><a href="/goals/<%= g._id %>">See Goal</a></td>
+                            <td class="see-goal-name"><%= g.name %></td>
+                            <td class="see-goal-created"><%= g.created %></td>
+                            <td class="see-goal-deadline"><%= g.deadline %></td>
+                            <td class="see-goal-status"><%= g.status %></td>
+                            <td ><a href="/goals/<%= g._id %>"> <button class="see-goal-button">See Goal</button> </a></td>
                             <td><form method="POST" action="/goals/<%= g._id %>?_method=DELETE" class="delete-form">
-                                <button type="submit">Delete Goal</button></form></td>
+                                <button type="submit" class="delete-goal-button">Delete Goal</button></form></td>
                         </tr>
                     <% }) %>
                 </tbody>

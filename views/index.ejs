@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %>
-<body>
-    <%- include('./partials/header') %>
+<body class="indexBody">
+    <% if(user) { %>
+    <header>
+        <img src="https://i.imgur.com/6KbaZFU.png" alt="calander logo" class="logo">
+        <h1>Goal Tracker</h1>
+        <h2>Your Goal's Bestie</h2>
+        <img  class="logout-image" src="https://i.imgur.com/4ThY7AA.png" alt="logout image">
+        <a href="/logout"> <button class="index-logout-button">LOG OUT</button> </a>
+    </header>
     <div class="container1">
+        <img src="https://i.imgur.com/I7b7HZ6.png" alt="list">
         <a href="/">Home</a>
     </div>
     <div class="container2">
+        <img src="https://i.imgur.com/n21yC3L.png" alt="pens">
         <a href="/goals/new">New Goal</a>
     </div>
     <div class="container3">
-        <img src="/public/css/images/pens.png" alt="pens">
+        <img src="https://i.imgur.com/aeLrYAq.png" alt="planner">
         <a href="/goals">See All Goals</a>
     </div>
+    <% } else { %>
+        <header>
+            <img src="https://i.imgur.com/6KbaZFU.png" alt="calander logo" class="logo">
+            <h1>Goal Tracker</h1>
+            <h2>Your Goal's Bestie</h2>
+        </header>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img class="loginImage" src="https://i.imgur.com/FHjYyi0.png"></a>
+    <% } %>
     <%- include('./partials/footer') %>
 </body>
 </html>

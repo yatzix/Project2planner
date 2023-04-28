@@ -1,26 +1,28 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <%- include('../partials/header', { title }) %>
-    <%- include('../partials/head', { title }) %>
-<form action="/goals" method="POST">
-  <label>Name:
-    <input type="text" name="name">
-  </label><br>
-  <label>Created on:
-    <input type="date" name="created">
-  </label><br>
-  <label>Deadline: 
-    <input type="date" name="deadline"
-  </label><br>
-  </label><br>
-  <label>Status:
-    <select name="status">
-        <option value="Pending">Pending</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Done">Done</option>
-      </select>
-  </label><br>
-  <button type="submit">Add Goal</button>
-</form>
+  <%- include('../partials/header', { title }) %> <%-
+  include('../partials/head', { title }) %>
+  <body class="newGoalBody">
+    <form action="/goals" method="POST" class="goals-form">
+      <h1 class="h1-goals-new">Create Your Goal</h1>
+      <label class="goals-name-label"
+        >Name:
+        <input type="text" name="name" />
+      </label>
+      <label class="goals-created-label">Created on:
+        <input type="date" name="created" />
+      </label>
+      <label class="goals-deadline">Deadline: <input type="date" name="deadline"> </label>
+      <label>Status:
+        <select name="status" class="goals-select">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Done">Done</option>
+        </select>
+      </label>
+      <button type="submit" class="add-goal-button">Add Goal</button>
+    </form>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
