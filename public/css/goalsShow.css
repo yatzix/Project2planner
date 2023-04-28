@@ -67,10 +67,17 @@ textarea{
 }
 
 .show-head{
-    color: black;
-    width: 100%;
-
+    color: black; 
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 30vmin;
+    left: 10vmin;
+    right: auto;
+    padding: 10px;
+    width: 60%;
 }
+
 
 tr{
     width: 100%;
@@ -107,29 +114,104 @@ tr{
     border: 3px solid #555;
 }
 
-#show-body{
-    color: black;
-    width: 100%; 
+.show-body{
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 35vmin;
+    left: 10vmin;
+    right: auto;
+    padding: 10px;
+    width: 60%;
 }
+
 
 td{
     width: 100%;
     display: flex;
 }
 .show-name{
-    margin-left: 1vmin;
+    margin-left: 6vmin;
    
 }
 .show-created{
-    margin-left:1vmin;
+    margin-left:11vmin;
 }
 .show-deadline{
-    margin-left: 1vmin;
+    margin-left: 9vmin;
 }
 
 .show-status{
-    margin-left: 1vmin;
+    margin-left: 9vmin;
 }
 .add-to-dos{
-    margin-left: 30vmin;
+    margin-left: 16vmin;
+}
+
+.todo-body{
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50vmin;
+    left: 10vmin;
+    right: auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.todo-head{
+    color: black; 
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 45vmin;
+    left: 10vmin;
+    right: auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.todo-label{
+    margin-left: 4vmin;
+   
+}
+.todo-when-label{
+    margin-left:15vmin;
+}
+.todo-status-label{
+    margin-left: 18vmin;
+}
+
+.journal-head{
+    color: black; 
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 60vmin;
+    left: 10vmin;
+    right: auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.journal-body{
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 65vmin;
+    left: 10vmin;
+    right: auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.journal-name{
+    margin-left: 4vmin;
+   
+}
+.journal-date-label{
+    margin-left:45vmin;
 }

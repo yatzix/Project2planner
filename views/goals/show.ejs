@@ -61,17 +61,17 @@
       </form>
       <% if (goal.progress.length) { %>
       <table>
-        <thead>
+        <thead class="journal-head">
           <tr>
-            <th>Progress</th>
-            <th>When</th>
+            <th class="journal-name">Progress</th>
+            <th class="journal-date-label">Date</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="journal-body">
           <% goal.progress.forEach(function(j) { %>
           <tr>
-            <td><%= j.progress %></td>
-            <td><%= j.when %></td>
+            <td class="journal-progress"><%= j.progress %></td>
+            <td class="journal-when"><%= j.when %></td>
           </tr>
           <% }); %>
         </tbody>
