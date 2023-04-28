@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+mongoose.connect( process.env.DATABASE_URL );
+
 
 const journalSchema = new Schema({
     progress:{
