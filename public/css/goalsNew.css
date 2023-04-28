@@ -44,6 +44,18 @@
     background-color: #f29c6b;
     color: white;  
   }
+
+  .goals-dealine-date{
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #f9e2d1;
+    border-radius: 10px;
+    background-color: #f29c6b;
+    color: white;  
+  }
+
   input[type=text]:focus {
     background-color: #f9e2d1;
     border: 3px solid #555;
