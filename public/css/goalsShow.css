@@ -66,26 +66,7 @@ textarea{
     margin-top: 0;   
 }
 
-#content-see-all{
-    background-color: antiquewhite;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-    margin-top: 10vmin;
-    padding: 0;
-    
-
-}
-#labelSeeAllContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
+.show-head{
     color: black;
     width: 100%;
 
@@ -94,13 +75,9 @@ textarea{
 tr{
     width: 100%;
     display: flex;
-    /* justify-content: space-evenly; */
-    margin-right: 30px;
-
-
 }
 
-.see-goal-button{
+.todo-button{
     width: 20vmin;
     height: 5vmin;
     padding: 10px 15px;
@@ -113,7 +90,7 @@ tr{
     margin-top: 0;
 }
 
-.delete-goal-button{
+.todo-delete-button{
     width: 20vmin;
     height: 5vmin;
     padding: 10px 15px;
@@ -125,12 +102,12 @@ tr{
     color: rgb(0, 0, 0);  
     margin-top: 0;
 }
-.delete-goal-button:focus{
-    background-color: #f9e2d1;
+.todo-delete-button:focus{
+    background-color: rgb(226, 88, 38);
     border: 3px solid #555;
 }
 
-#see-goal-body{
+#show-body{
     color: black;
     width: 100%; 
 }
@@ -138,25 +115,21 @@ tr{
 td{
     width: 100%;
     display: flex;
-    /* justify-content: space-evenly; */
-    padding: 0;
-    margin-left: 30px;
-
 }
-.label-name{
-    margin-left: 7vmin;
+.show-name{
+    margin-left: 1vmin;
    
 }
-.label-created{
-    margin-left:20vmin;
+.show-created{
+    margin-left:1vmin;
 }
-.label-deadline{
-    margin-left: 19vmin;
+.show-deadline{
+    margin-left: 1vmin;
 }
 
-.label-status{
-    margin-left: 19vmin;
+.show-status{
+    margin-left: 1vmin;
 }
-.label-details{
+.add-to-dos{
     margin-left: 30vmin;
 }
