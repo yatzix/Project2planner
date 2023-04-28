@@ -18,8 +18,15 @@ Mongoose
 MongoDB
 
 ## Usage
+Log in page:
+<img width="1903" alt="Screenshot 2023-04-27 at 9 15 34 PM" src="https://user-images.githubusercontent.com/114562006/235053737-fedca1bb-591c-496d-9af7-1642c6bf0665.png">
 
- 
+Home Page after user logs in:
+<img width="1910" alt="Screenshot 2023-04-27 at 9 25 17 PM" src="https://user-images.githubusercontent.com/114562006/235053971-bdf33b83-f534-4274-9076-878d12e0c921.png">
+
+Create Goal Page:
+
+<img width="1910" alt="Screenshot 2023-04-27 at 9 26 17 PM" src="https://user-images.githubusercontent.com/114562006/235054102-2c939871-4c5f-4ec3-82d3-206eeaa71042.png">
 
 ## Roadmap
 ✅ AAU I want to have the option to delete to-dos from to-dos list in my Goals Details page
